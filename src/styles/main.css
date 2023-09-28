@@ -1,3 +1,40 @@
-img {
-  display: block;
+@import url(./header.css);
+
+:root{
+  --gainsboro: #d6d8e5;
+  --lavender: #e7eaf3;
+  --black: #05080c;
+}
+*{
+  margin: 0;
+}
+
+body{
+  font-family: "Poppins",sans-serif;
+  background-color: var(--gainsboro);
+  width: 100%;
+}
+
+button{
+  border: none;
+  padding-inline: 1.5rem;
+  padding-block: .8rem;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+button.regular{
+  color: var(--lavender);
+  background-color: var(--black);
+}
+button.convert{
+  color: var(--black);
+  background-color: var(--lavender);
+}
+button.convert:hover{
+  background-color: var(--gainsboro);
+}
+
+a.list-item{
+  text-decoration: none;
+  color: var(--lavender);
 }

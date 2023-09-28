@@ -1,0 +1,36 @@
+header{
+    background-color: transparent;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    color: var(--lavender);
+    padding: .8rem;
+    align-items: center;
+    margin-inline: auto;
+    max-width: 1024px;
+    justify-content: space-between;
+}
+
+nav .nav-item ul{
+    display: none;
+    list-style-type: none;
+    gap: 4rem;
+    font-size: small;
+}
+nav .brand{
+    font-family: 'Croissant One', cursive;
+}
+
+
+@media (min-width: 1024px){
+    nav .nav-item ul{
+        display: flex;
+    }
+    nav button{
+        display: none;
+    }
+}
