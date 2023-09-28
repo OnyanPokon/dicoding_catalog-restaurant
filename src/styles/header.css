@@ -1,13 +1,12 @@
 header{
-    background-color: transparent;
+    background-color: var(--lavender);
     z-index: 999;
     position: fixed;
     width: 100%;
+    color: var(--black);
 }
-
 nav{
     display: flex;
-    color: var(--lavender);
     padding: .8rem;
     align-items: center;
     margin-inline: auto;
@@ -21,6 +20,12 @@ nav .nav-item ul{
     gap: 4rem;
     font-size: small;
 }
+
+a.list-item{
+    text-decoration: none;
+    color: var(--black);
+}
+
 nav .brand{
     font-family: 'Croissant One', cursive;
 }

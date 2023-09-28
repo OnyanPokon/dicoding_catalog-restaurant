@@ -1,5 +1,6 @@
 @import url(./header.css);
 @import url(./hero.css);
+@import url(./find.css);
 
 :root{
   --gainsboro: #d6d8e5;
@@ -35,7 +36,41 @@ button.convert:hover{
   background-color: var(--gainsboro);
 }
 
-a.list-item{
-  text-decoration: none;
-  color: var(--lavender);
+.card{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lavender);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px #b2b4c1;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.card img{
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  height: 200px;
+}
+.card .card-desc{
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: 2rem;
+  gap: .8rem;
+}
+.card .card-desc h3{
+  color: var(--black);
+}
+.card .card-desc a{
+  color: var(--black);
+  opacity: .8;
+}
+.card .card-desc h3 span{
+  font-weight: bold;
+  opacity: .8;
+  font-size: small;
+}
+
+.card:hover{
+  transform: scale(1.03);
 }
