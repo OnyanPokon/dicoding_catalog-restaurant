@@ -1,3 +1,74 @@
-img {
-  display: block;
+@import url(./nav.css);
+@import url(./hero.css);
+@import url(./find.css);
+
+:root{
+  --gainsboro: #d6d8e5;
+  --lavender: #e7eaf3;
+  --black: #05080c;
+}
+*{
+  margin: 0;
+}
+
+body{
+  font-family: "Poppins",sans-serif;
+  background-color: var(--gainsboro);
+  width: 100%;
+}
+
+button{
+  border: none;
+  padding-inline: 1.5rem;
+  padding-block: .8rem;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+button.regular{
+  color: var(--lavender);
+  background-color: var(--black);
+}
+button.convert{
+  color: var(--black);
+  background-color: var(--lavender);
+}
+button.convert:hover{
+  background-color: var(--gainsboro);
+}
+
+a.list-item{
+  text-decoration: none;
+  color: var(--lavender);
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lavender);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px #b2b4c1;
+}
+.card img{
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.card .card-desc{
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: 2rem;
+  gap: .8rem;
+}
+.card .card-desc h3{
+  color: var(--black);
+}
+.card .card-desc a{
+  color: var(--black);
+  opacity: .8;
+}
+.card .card-desc h3 span{
+  font-weight: bold;
+  opacity: .8;
+  font-size: small;
 }
