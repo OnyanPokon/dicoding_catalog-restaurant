@@ -1,0 +1,36 @@
+footer{
+    background-color: var(--black);
+    width: 100%;
+}
+footer .container{
+    max-width: 1024px;
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer hr{
+    color: var(--lavender);
+    opacity: 0.3;
+}
+
+footer .footer-logo{
+    color: var(--lavender);
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Croissant One', cursive;
+}
+
+footer .copyright{
+    text-align: center;
+    color: var(--lavender);
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    opacity: 0.5;
+    font-size: small;
+}

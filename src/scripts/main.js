@@ -2,13 +2,8 @@ const data = require('../public/data/DATA.json');
 
 const main = () =>{
 
-    
-
-
-
     const restaurants = data.restaurants; 
     const restaurantContainer = document.getElementById('restaurant-container');
-    
 
     restaurants.forEach((restaurant) => {
         const cardDiv = document.createElement('div');
@@ -19,11 +14,9 @@ const main = () =>{
             <img src="${restaurant.pictureId}" alt="${restaurant.name}">
         </div>
         <div class="card-desc">
-            
             <h3>${restaurant.name}<span> (${restaurant.city}) </span></h3>
             <p>${restaurant.rating} <i class="fa-solid fa-star"></i></p>
-            <p>${description}</p>
-            <a href="" class="">read more</a>
+            <p class="description">${description}</p>
         </div>
         `;
         restaurantContainer.appendChild(cardDiv);
