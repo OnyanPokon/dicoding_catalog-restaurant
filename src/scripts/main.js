@@ -2,6 +2,17 @@ const data = require('../public/data/DATA.json');
 
 const main = () =>{
 
+    const toggle = document.querySelector('#toggle');
+
+    const menu = document.querySelector('#menu')
+    toggle.addEventListener('click', () => {
+      if(menu.classList.contains('slide')){
+        menu.classList.remove('slide');
+      }else{
+        menu.classList.add('slide');
+      }
+    })
+
     const restaurants = data.restaurants; 
     const restaurantContainer = document.getElementById('restaurant-container');
 

@@ -10,22 +10,20 @@
 <body>
   <a href="#main" class="skip-link">Menuju ke konten</a>
   <header>
-    <nav class="container max-screen">
+    <nav>
       <div class="brand">
         <span>AT</span>
       </div>
-      <input id="menu-toggle" type="checkbox" />
-      <label class='menu-button-container' for="menu-toggle">
-        <div class='menu-button'></div>
-      </label>
-      <ul class="menu">
-        <li><a class="list-item" href="./">Beranda</a></li>
-        <li><a class="list-item" href="#">Favorit</a></li>
-        <li><a class="list-item" href="https://onyanpokon.github.io/portfolio">Tentang Kami</a></li>
+      <ul id="menu">
+        <li><a href="">Beranda</a></li>
+        <li><a href="">Favorit</a></li>
+        <li><a href="">Tentang Kami</a></li>
       </ul>
+      <button class="regular" id="toggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
   </header>
-
   <main id="main">
     <section class="hero" id="hero">
       <div class="overlay"></div>
@@ -46,7 +44,6 @@
       </div>
     </section>
   </main>
-
   <footer>
     <div class="container">
       <div class="footer-logo">
