@@ -80,10 +80,13 @@ button.convert:hover{
 }
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 0;
-  padding: 8px;
-  background-color: #bf1722;
-  color: white;
+  padding: 1rem;
+  background-color: var(--gainsboro);
+  color: var(--black);
   z-index: 999;
+}
+.skip-link:focus{
+  top: 0;
 }
