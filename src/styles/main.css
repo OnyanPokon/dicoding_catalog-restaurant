@@ -2,6 +2,7 @@
 @import url(./hero.css);
 @import url(./find.css);
 @import url(./footer.css);
+@import url(./detail.css);
 
 :root{
   --gainsboro: #d6d8e5;
@@ -45,7 +46,6 @@ button.convert:hover{
   border-radius: 1rem;
   box-shadow: 5px 5px 10px #b2b4c1;
   transition: transform 0.2s ease-in-out;
-  cursor: pointer;
 }
 .card img{
   width: 100%;
@@ -66,6 +66,7 @@ button.convert:hover{
 .card .card-desc a{
   color: var(--black);
   opacity: .8;
+  text-decoration: none;
 }
 .card .card-desc h3 span{
   font-weight: bold;
@@ -73,7 +74,7 @@ button.convert:hover{
   font-size: small;
 }
 .card .card-desc p.description{
-  font-size: small;
+  font-size: smaller;
 }
 .card:hover{
   transform: scale(1.03);
@@ -90,3 +91,4 @@ button.convert:hover{
 .skip-link:focus{
   top: 0;
 }
+

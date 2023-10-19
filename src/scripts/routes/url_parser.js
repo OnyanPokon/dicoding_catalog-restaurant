@@ -6,7 +6,7 @@ const UrlParser = {
   },
 
   parseWithoutCombiner() {
-    const url = window.location.hash.split(1).toLowerCase();
+    const url = window.location.hash.slice(1).toLowerCase();
     return this._urlSplitter(url);
   },
 

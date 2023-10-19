@@ -1,4 +1,5 @@
 import RestaurantDb from '../../data/restaurant-db';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -12,13 +13,11 @@ const Home = {
         </div>
     </section>
     <section class="find-us" id="find-us">
-        <div class="container">
-        </div>
         <div class="heading">
-        <h2>Temukan Kami</h2>
+          <h2>Temukan Kami</h2>
         </div>
         <div class="grid-container" id="restaurant-container">
-        
+          
         </div>
     </section>
     `;
@@ -26,7 +25,10 @@ const Home = {
 
   async afterRender() {
     const restaurants = await RestaurantDb.Restaurants();
-    console.log(restaurants);
+    const restaurantContainer = document.querySelector('#restaurant-container');
+    restaurants.forEach((restaurant) => {
+      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    });
   },
 };
 
