@@ -27,10 +27,15 @@ const createDetailRestaurantTemplate = (restaurant) => {
     <div class="col-1">
         <div class="info">
             <div class="name">
-                <h1>${restaurant.name}</h1>
-                
-                <span><i class="fas fa-star"></i> ${restaurant.rating}</span>
-                (${restaurant.city})
+                <div>
+                    <h1>${restaurant.name}</h1>
+                    
+                    <span><i class="fas fa-star"></i> ${restaurant.rating}</span>
+                    (${restaurant.city})
+                </div>
+                <div>
+                    <button class="regular">Add to favorit</button>
+                </div>
             </div>
             <div class="place">
                 <p><i class="fa-solid fa-location-dot"></i> ${restaurant.address} </p> 

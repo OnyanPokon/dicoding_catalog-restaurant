@@ -23,6 +23,13 @@ section.detail{
     flex-direction: column;
     gap: 1rem;
 }
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
 .name h1{
     font-size: xx-large;
     font-weight: bolder;
@@ -152,6 +159,10 @@ section.detail{
 @media (min-width: 768px){
     .detail-container{
         flex-direction: row;
+    }
+    .name{
+        flex-direction: row;
+        align-items: center;
     }
 }
 
