@@ -3,6 +3,7 @@
 @import url(./find.css);
 @import url(./footer.css);
 @import url(./detail.css);
+@import url(./add-review.css);
 
 :root{
   --gainsboro: #d6d8e5;
