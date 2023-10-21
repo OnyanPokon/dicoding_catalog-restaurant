@@ -10,7 +10,7 @@ const createRestaurantItemTemplate = (restaurant) => {
         </div>
         <div class="card-desc">
             <p>${restaurant.rating} <i class="fa-solid fa-star"></i></p>
-            <h3><a href="/#/detail/${restaurant.id}">${restaurant.name}</a><span> (${restaurant.city}) </span></h3>
+            <a href="/#/detail/${restaurant.id}"><h3>${restaurant.name}<span> (${restaurant.city})</span></h3></a>
             <p class="description">${description}</p>
         </div>
     </div>
@@ -55,7 +55,7 @@ const createDetailRestaurantTemplate = (restaurant) => {
     </div>
     <div class="col-2">
         <div class="image-placeholder">
-            <img src="${CONFIG.BASE_IMG_URL + restaurant.pictureId}">
+            <img src="${CONFIG.BASE_IMG_URL + restaurant.pictureId}" alt="restaurant image">
         </div>
         <div class="review-container">
             ${reviewElements}

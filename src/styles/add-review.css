@@ -31,9 +31,7 @@ section.add-review{
 .add-review-container button:hover{
     background-color: #111920;
 }
-.add-review-container button:focus{
-    outline: 1px var(--lavender);
-}
+
 
 .add-review-container form textarea{
     resize: none;

@@ -68,6 +68,8 @@ button.convert:hover{
   color: var(--black);
   opacity: .8;
   text-decoration: none;
+  padding-block: .5rem;
+  
 }
 .card .card-desc h3 span{
   font-weight: bold;
