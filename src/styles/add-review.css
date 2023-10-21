@@ -1,0 +1,57 @@
+section.add-review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1024px;
+    margin-inline: auto;
+    background-color: var(--lavender);
+    padding-block: 4rem;
+    padding-inline: 2rem;
+    gap: 3rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    box-shadow: 3px 3px 10px 1px #b2b4c1;
+}
+.add-review-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: flex-start;
+    gap: 1rem;
+    
+}
+.add-review-container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    flex: 4;
+}
+.add-review-container button:hover{
+    background-color: #111920;
+}
+.add-review-container button:focus{
+    outline: 1px var(--lavender);
+}
+
+.add-review-container form textarea{
+    resize: none;
+    border: none;
+    border-radius: 1rem;
+    min-height: 200px;
+    padding: 1rem;
+    font-family: 'POPPINS', sans-serif;
+}
+.add-review-container form input{
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+
+@media (min-width: 768px){
+    .add-review-container{
+        padding-inline: 4rem;
+    }
+}
