@@ -12,6 +12,17 @@ class RestaurantDb {
     const responseJson = await response.json();
     return responseJson.restaurant;
   }
+
+  static async postRestaurant(data) {
+    const rawResponse = await fetch(API_ENDPOINT.POSTREVIEW, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    return rawResponse;
+  }
 }
 
 export default RestaurantDb;
