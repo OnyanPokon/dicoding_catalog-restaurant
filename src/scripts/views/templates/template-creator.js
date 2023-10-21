@@ -1,6 +1,4 @@
 import CONFIG from '../../globals/config';
-import UrlParser from '../../routes/url_parser';
-import PostReview from '../../utils/send-review-helper';
 import { createCategoryElements, createMenuCard, createReviewCard } from './card';
 
 const createRestaurantItemTemplate = (restaurant) => {
@@ -46,11 +44,11 @@ const createDetailRestaurantTemplate = (restaurant) => {
                 <p>${restaurant.description}</p>
             </div>
             <div class="food-container">
-                <h3>Food</h3>
+                <h3>Foods</h3>
                 ${foodElements}
             </div>
             <div class="drink-container">
-                <h3>Drink</h3>
+                <h3>Drinks</h3>
                 ${drinkElements}
             </div>
         </div>
@@ -58,24 +56,6 @@ const createDetailRestaurantTemplate = (restaurant) => {
     <div class="col-2">
         <div class="image-placeholder">
             <img src="${CONFIG.BASE_IMG_URL + restaurant.pictureId}">
-        </div>
-        <div class="add-review">
-            <div class="review-head">
-                <div class="user-profile">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="review-form">
-                    <form action="/action_page.php">
-                        <div class="form-control">
-                            <input name="inputName" type="text" id="inputName" placeholder="Masukan Nama Kamu">
-                        </div>  
-                        <div class="form-control">
-                            <textarea name="review-text" id="inputReview">masukan komentarmu</textarea>
-                        </div>    
-                        <button class="regular" type="submit" id="submit-review">Sumbit Review</button>
-                    </form>
-                </div>
-            </div>
         </div>
         <div class="review-container">
             ${reviewElements}
