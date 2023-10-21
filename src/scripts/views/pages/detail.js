@@ -1,5 +1,6 @@
 import RestaurantDb from '../../data/restaurant-db';
 import UrlParser from '../../routes/url_parser';
+import likeButtonInitiatior from '../../utils/like-button-initiator';
 import PostReviewHelper from '../../utils/review-post-helper';
 import { createDetailRestaurantTemplate } from '../templates/template-creator';
 
@@ -9,6 +10,7 @@ const Detail = {
         <section class="detail" >
           <div id="restaurant-detail-contianer" class="detail-container">
           </div>
+          <div id="likeButtonContainer"></div>
         </section>
         <section class="add-review" >
           <h3>Leave Some Review</h3>
@@ -29,6 +31,16 @@ const Detail = {
     const restaurantContainer = document.querySelector('#restaurant-detail-contianer');
 
     restaurantContainer.innerHTML = createDetailRestaurantTemplate(restaurant);
+    likeButtonInitiatior.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant: {
+        id: restaurant.id,
+        name: restaurant.name,
+        description: restaurant.description,
+        pictureId: restaurant.pictureId,
+        city: restaurant.city,
+        rating: restaurant.rating,
+      },
 
     const btnSubmit = document.querySelector('#submit-review');
     const inputName = document.querySelector('#input-name');
