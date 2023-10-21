@@ -19,13 +19,6 @@ body{
   font-family: "Poppins",sans-serif;
   background-color: var(--gainsboro);
   width: 100%;
-
-}
-
-main{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 button{
@@ -52,7 +45,6 @@ button.convert:hover{
   flex-direction: column;
   background-color: var(--lavender);
   border-radius: 1rem;
-  outline: .2rem solid var(--gainsboro);
   box-shadow: 5px 5px 10px #b2b4c1;
   transition: transform 0.2s ease-in-out;
 }

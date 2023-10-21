@@ -41,6 +41,7 @@ const Detail = {
         city: restaurant.city,
         rating: restaurant.rating,
       },
+    });
 
     const btnSubmit = document.querySelector('#submit-review');
     const inputName = document.querySelector('#input-name');
