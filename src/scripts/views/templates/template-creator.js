@@ -1,5 +1,7 @@
 import CONFIG from '../../globals/config';
-import { createCategoryElements, createMenuCard, createReviewCard } from './components';
+import UrlParser from '../../routes/url_parser';
+import PostReview from '../../utils/send-review-helper';
+import { createCategoryElements, createMenuCard, createReviewCard } from './card';
 
 const createRestaurantItemTemplate = (restaurant) => {
   const description = restaurant.description.split(' ').slice(0, 20).join(' ');
@@ -27,10 +29,12 @@ const createDetailRestaurantTemplate = (restaurant) => {
     <div class="col-1">
         <div class="info">
             <div class="name">
-                <h1>${restaurant.name}</h1>
-                
-                <span><i class="fas fa-star"></i> ${restaurant.rating}</span>
-                (${restaurant.city})
+                <div>
+                    <h1>${restaurant.name}</h1>
+                    
+                    <span><i class="fas fa-star"></i> ${restaurant.rating}</span>
+                    (${restaurant.city})
+                </div>
             </div>
             <div class="place">
                 <p><i class="fa-solid fa-location-dot"></i> ${restaurant.address} </p> 
@@ -55,6 +59,24 @@ const createDetailRestaurantTemplate = (restaurant) => {
         <div class="image-placeholder">
             <img src="${CONFIG.BASE_IMG_URL + restaurant.pictureId}">
         </div>
+        <div class="add-review">
+            <div class="review-head">
+                <div class="user-profile">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="review-form">
+                    <form action="/action_page.php">
+                        <div class="form-control">
+                            <input name="inputName" type="text" id="inputName" placeholder="Masukan Nama Kamu">
+                        </div>  
+                        <div class="form-control">
+                            <textarea name="review-text" id="inputReview">masukan komentarmu</textarea>
+                        </div>    
+                        <button class="regular" type="submit" id="submit-review">Sumbit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="review-container">
             ${reviewElements}
         </div>
@@ -62,4 +84,20 @@ const createDetailRestaurantTemplate = (restaurant) => {
     `;
 };
 
-export { createDetailRestaurantTemplate, createRestaurantItemTemplate };
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="likeButton" class="like">
+     <i class="fa-solid fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
+    <i class="fa-solid fa-heart-circle-check" aria-hidden="true"></i>
+  </button>
+`;
+
+export {
+  createDetailRestaurantTemplate, createRestaurantItemTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};

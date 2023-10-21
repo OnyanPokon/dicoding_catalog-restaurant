@@ -5,7 +5,7 @@ const createMenuCard = (foodOrDrink, i, type) => `
             <img src="${getRandomImage(type, i)}">
             <p>${foodOrDrink.name}</p>
             <span class="badge">
-                <i class="fa-solid fa-chevron-right"></i>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </span>
         </div>
     `;
@@ -25,4 +25,6 @@ const createReviewCard = (review, i) => `
 
 const createCategoryElements = (categories) => categories.map((category) => `<span class="category-item">${category.name}</span>`).join('');
 
-export { createCategoryElements, createReviewCard, createMenuCard };
+export {
+  createCategoryElements, createReviewCard, createMenuCard,
+};
