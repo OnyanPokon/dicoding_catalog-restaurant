@@ -1,6 +1,6 @@
 import RestaurantDb from '../../data/restaurant-db';
 import UrlParser from '../../routes/url_parser';
-import likeButtonInitiatior from '../../utils/like-button-initiator';
+import likeButtonInitiatior from '../../utils/like-button-presenter';
 import PostReviewHelper from '../../utils/review-post-helper';
 import { createDetailRestaurantTemplate } from '../templates/template-creator';
 

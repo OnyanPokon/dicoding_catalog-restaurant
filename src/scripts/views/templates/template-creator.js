@@ -64,13 +64,13 @@ const createDetailRestaurantTemplate = (restaurant) => {
     `;
 };
 
-const createLikeButtonTemplate = () => `
+const createLikeRestaurantButtonTemplate = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa-solid fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
+const createUnlikeRestaurantButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa-solid fa-heart-circle-check" aria-hidden="true"></i>
   </button>
@@ -78,6 +78,6 @@ const createLikedButtonTemplate = () => `
 
 export {
   createDetailRestaurantTemplate, createRestaurantItemTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate,
+  createUnlikeRestaurantButtonTemplate,
 };
