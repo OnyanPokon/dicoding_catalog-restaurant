@@ -8,6 +8,9 @@ const Like = {
             <div class="heading">
             <h2>Liked Restaurant</h2>
             </div>
+            <div class="no-favorite-page">
+              <h2 class="no-favorite-message">Belum ada restaurant favorite</h2>
+            </div>
             <div class="grid-container" id="restaurant-container">
             
             </div>
