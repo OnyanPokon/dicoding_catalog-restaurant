@@ -17,6 +17,17 @@ section.find-us{
     gap: 2rem;
 }
 
+.no-favorite-page{
+    display: none;
+}
+
+.no-favorite-page .no-favorite-message{
+    font-weight: 300;
+    color: darkgrey;
+    font-size: smaller;
+}
+
+
 
 @media (min-width: 1024px) {
     .grid-container{

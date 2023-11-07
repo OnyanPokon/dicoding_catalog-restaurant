@@ -113,3 +113,6 @@ button.convert:hover{
   color: var(--gainsboro);
   cursor: pointer;
 }
+.no-favorite-page{
+  display: none;
+}

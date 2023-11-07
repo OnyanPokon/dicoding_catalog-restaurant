@@ -6,12 +6,12 @@ const createRestaurantItemTemplate = (restaurant) => {
   return `
     <div class="card">
         <div class="card-head">
-            <img src="${CONFIG.BASE_IMG_URL + restaurant.pictureId}" alt="${restaurant.name}">
+            <img class="lazyload" src="${CONFIG.BASE_IMG_URL + restaurant.pictureId}" alt="${restaurant.name}">
         </div>
         <div class="card-desc">
-            <p>${restaurant.rating} <i class="fa-solid fa-star"></i></p>
-            <a href="/#/detail/${restaurant.id}"><h3>${restaurant.name}<span> (${restaurant.city})</span></h3></a>
-            <p class="description">${description}</p>
+            <p>${restaurant.rating || '-'} <i class="fa-solid fa-star"></i></p>
+            <a href="/#/detail/${restaurant.id}" id="restaurant_name"><h3>${restaurant.name || '-'}<span> (${restaurant.city || '-'})</span></h3></a>
+            <p class="description">${description || '-'}</p>
         </div>
     </div>
     `;
