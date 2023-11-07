@@ -7,7 +7,7 @@ Scenario('Check if favorite page is empty', async ({ I }) => {
   I.amOnPage('/#/like');
   await new Promise((resolve) => setTimeout(resolve, 5000));
   I.seeElement('.no-favorite-message');
-  I.see('Belum ada restaurant favorite', '.no-favorite-message');
+  I.see('You don\'t like any restaurants yet', '.no-favorite-message');
 });
 
 Scenario('add and delete resto', async ({ I }) => {
@@ -30,7 +30,7 @@ Scenario('add and delete resto', async ({ I }) => {
   I.amOnPage('/#/like');
   await new Promise((resolve) => setTimeout(resolve, 5000));
   I.seeElement('.no-favorite-message');
-  I.see('Belum ada restaurant favorite', '.no-favorite-message');
+  I.see('You don\'t like any restaurants yet', '.no-favorite-message');
 });
 
 Scenario('add a review', async ({ I }) => {
