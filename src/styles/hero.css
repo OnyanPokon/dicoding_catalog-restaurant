@@ -37,18 +37,34 @@ section.hero .headline p{
 }
 
 @keyframes changeBackground {
-    0%, 100% {
-      background-image: url(../public/images/imagesoptimazed/small/hero-image_1-small.jpg);
-    }
-    25% {
-      background-image: url(../public/images/imagesoptimazed/small/hero-image_2-small.jpg);
-    }
-    50% {
-      background-image: url(../public/images/imagesoptimazed/small/hero-image_3-small.jpg);
-    }
-    75% {
-      background-image: url(../public/images/imagesoptimazed/small/hero-image_4-small.jpg);
-    }
+  0%, 100% {
+    background-image: image-set(
+      url(../public/images/imagesoptimazed/small/hero-image_1-small.jpg) 1x,
+      url(../public/images/imagesoptimazed/large/hero-image_1-large.jpg) 2x,
+      url(../public/images/imagesoptimazed/medium/hero-image_1-medium.jpg) 3x
+    );
+  }
+  25% {
+    background-image: image-set(
+      url(../public/images/imagesoptimazed/small/hero-image_2-small.jpg) 1x,
+      url(../public/images/imagesoptimazed/large/hero-image_2-large.jpg) 2x,
+      url(../public/images/imagesoptimazed/medium/hero-image_2-medium.jpg) 3x
+    );
+  }
+  50% {
+    background-image: image-set(
+      url(../public/images/imagesoptimazed/small/hero-image_3-small.jpg) 1x,
+      url(../public/images/imagesoptimazed/large/hero-image_3-large.jpg) 2x,
+      url(../public/images/imagesoptimazed/medium/hero-image_3-medium.jpg) 3x
+    );
+  }
+  75% {
+    background-image: image-set(
+      url(../public/images/imagesoptimazed/small/hero-image_4-small.jpg) 1x,
+      url(../public/images/imagesoptimazed/large/hero-image_4-large.jpg) 2x,
+      url(../public/images/imagesoptimazed/medium/hero-image_4-medium.jpg) 3x
+    );
+  }
 }
   
 section.hero {
@@ -63,21 +79,6 @@ section.hero {
     section.hero .headline h1{
         font-size: 5rem;
     }
-
-    @keyframes changeBackground {
-        0%, 100% {
-          background-image: url(../public/images/imagesoptimazed/large/hero-image_1-large.jpg);
-        }
-        25% {
-          background-image: url(../public/images/imagesoptimazed/large/hero-image_2-large.jpg);
-        }
-        50% {
-          background-image: url(../public/images/imagesoptimazed/large/hero-image_3-large.jpg);
-        }
-        75% {
-          background-image: url(../public/images/imagesoptimazed/large/hero-image_4-large.jpg);
-        }
-    }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
     section.hero .headline{
@@ -88,18 +89,4 @@ section.hero {
         font-size: 3rem;
     }
 
-    @keyframes changeBackground {
-        0%, 100% {
-          background-image: url(../public/images/imagesoptimazed/medium/hero-image_1-meduim.jpg);
-        }
-        25% {
-          background-image: url(../public/images/imagesoptimazed/medium/hero-image_2-meduim.jpg);
-        }
-        50% {
-          background-image: url(../public/images/imagesoptimazed/medium/hero-image_3-meduim.jpg);
-        }
-        75% {
-          background-image: url(../public/images/imagesoptimazed/medium/hero-image_4-meduim.jpg);
-        }
-    }
 }

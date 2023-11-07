@@ -6,7 +6,7 @@ const createRestaurantItemTemplate = (restaurant) => {
   return `
     <div class="card">
         <div class="card-head">
-            <img class="lazyload" src="${CONFIG.BASE_IMG_URL + restaurant.pictureId}" alt="${restaurant.name}">
+            <img class="lazyload" data-src="${CONFIG.BASE_IMG_URL + restaurant.pictureId}" alt="${restaurant.name}">
         </div>
         <div class="card-desc">
             <p>${restaurant.rating || '-'} <i class="fa-solid fa-star"></i></p>
